@@ -12,12 +12,20 @@
     */
 
     //ENTRADA
-
+    const vezes = parseInt(prompt("Informe a quatidade de abastecimentos:"));
+    const distanciaTotal = Number(prompt("Informe a distância total percorrida:"));
 
     //PROCESSAMENTO
-
-
+    let abastecimentos = 0;
+    for (i = 0; i < vezes; i++)
+        abastecimentos += Number(prompt(`Informe o custo do ${i+1}º abastecimento:`));
+    
+    let media = distanciaTotal/abastecimentos;
+    
     //SAÍDA
+    document.write(`Cada quilômetro custou: R$ ${media.toFixed(2)}</br>
+    Os abastecimentos custaram: R$ ${abastecimentos.toFixed(2)}</br>
+    E foram percorridos ${distanciaTotal} Km.`);
 
 
 </script>
