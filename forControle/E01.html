@@ -7,12 +7,26 @@
     */
 
     //ENTRADA
-
+    let meninos = [], meninas = [];
+    let alunos = parseInt(prompt("Informe a quatidade de alunos para cadastrar:"));
 
     //PROCESSAMENTO
+    for (i = 0; i < alunos; i++) {
+        let nome = prompt("Infome o nome do aluno:");
+        let genero = prompt("Infome O-menino ou A-menina:").toLowerCase();
 
+        if (genero == "o") meninos.push(nome);
+        else if (genero == "a") meninas.push(nome);
+        else { alert("Indicação sem classificação, digite novamente."); i--; }
+    }
 
     //SAÍDA
-
-    
+    if (meninas.length > 0){
+        document.write(`Foram classificadas ${meninas.length}:</br>`);
+        for (i = 0; i < meninas.length; i++) document.write(`<li>${meninas[i]}</li>`);
+    }
+    if (meninos.length > 0){
+        document.write(`Foram classificadas ${meninos.length}:</br>`);
+        for (i = 0; i < meninos.length; i++) document.write(`<li>${meninos[i]}</li>`);
+    }
 </script>
