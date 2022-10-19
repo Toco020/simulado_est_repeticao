@@ -8,12 +8,18 @@
     */
 
     //ENTRADA
-
+    let precoKgArroz = [3.90, 4.80, 5.75, 6.99, 7.00, 4.99, 5.19];
 
     //PROCESSAMENTO
-
+    let media = 0;
+    for (precos of precoKgArroz) {
+        media += precos;
+    }
+    media /= precoKgArroz.length;
 
     //SAÍDA
-
+    document.write(`A média do arroz é de R$ ${media.toFixed(2)}</br>
+    O preço mais baixo é de R$ ${precoKgArroz.sort((a, b) => a-b)[0].toFixed(2)}</br>
+    E o preço mais alto é de R$ ${precoKgArroz.sort((a, b) => b-a)[0].toFixed(2)}`);
 
 </script>
