@@ -8,12 +8,21 @@
     */
 
     //ENTRADA
-
-
+    let nomePessoas = ["Eduardo da Silva", "Eduardo Montandon", "Lucas Eduardo", "José da Silva", "Rafael Gonçalves"];
+    let silvas = [];
+    
     //PROCESSAMENTO
-
+    for (let nome of nomePessoas) {
+        if (nome.toLowerCase().search("silva") != -1){
+            silvas.push(nome);
+        }
+    }
 
     //SAÍDA
+    document.write(`Existem ${silvas.length} descendentes da família Silva: </br>`);
 
+    for (silva of silvas) {
+        document.write(`<li>${silva}</li>`);
+    }
 
 </script>
