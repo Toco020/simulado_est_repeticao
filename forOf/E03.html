@@ -8,12 +8,23 @@
     */
 
     //ENTRADA
-
+    let listaLivros = ["A Arte da Guerra", "Sistemas Inteligentes", "Introdução a Programação com JS", "1984", "Use a cabeça: JS"];
 
     //PROCESSAMENTO
+    let tecnico = [], romance = [], outros = [];
 
+    for (livro of listaLivros) {
+        let tipo = prompt(`O livro ${livro} é de romance (R) ou técnico (T)?`).toUpperCase();
+        
+        if (tipo == "R") romance.push(livro);
+        else if (tipo == "F") tecnico.push(livro);
+        else outros.push(livro);
+    }
 
     //SAÍDA
-
+    document.write(`Foram classificados:</br>`);
+    if (romance.length > 0) document.write(`<li>${romance.length} livros de romance: ${romance.join(", ")}.</br>`);
+    if (tecnico.length > 0) document.write(`<li>${tecnico.length} livros técnicos: ${tecnico.join(", ")}.</br>`);
+    if (outros.length > 0) document.write(`<li>${outros.length} livros sem classificação: ${outros.join(", ")}.`);
 
 </script>
