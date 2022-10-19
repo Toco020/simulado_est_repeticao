@@ -11,12 +11,16 @@
     */
 
     //ENTRADA
-
+    let investimento = inv = Number(prompt("Infome o valor que deseja investir:"));
 
     //PROCESSAMENTO
-
+    let i = 0;
+    for (i; inv <= investimento*2; i++){
+        inv *= 1.005;
+        //document.write(`${inv.toFixed(2)}, `);
+    }
 
     //SAÍDA
-
+    document.write(`Serão necessários ${i} meses para dobrar o valor de R$ ${investimento.toFixed(2)}.`);
 
 </script>
